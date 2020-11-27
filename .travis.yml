@@ -7,20 +7,23 @@ php:
 env:
   - VERSION=1.7.2.2
     CHANNEL=major
-    TEST_TYPE=from_channel
-  - VERSION=1.6
-    CHANNEL=major
-    TEST_TYPE=from_channel
-  - VERSION=1.6.1.10
-    CHANNEL=minor
+    DOCKER_IMAGE_TAG=1.7-7.1-apache
     TEST_TYPE=from_channel
   # Check how the upgrade behaves with the latest stable PrestaShop release
   - VERSION=latest
     CHANNEL=minor
+    DOCKER_IMAGE_TAG=1.7-7.2-apache
     TEST_TYPE=from_channel
   # Check how the upgrade behaves with the latest pre-release PrestaShop version
   - VERSION=latest
     CHANNEL=archive
+    DOCKER_IMAGE_TAG=1.7-7.2-apache
+    TEST_TYPE=from_archive
+    PS_TARGET_VERSION=1.7.7.0
+    PS_TARGET_BRANCH=1.7.7.x
+  - VERSION=1.7.4.4
+    CHANNEL=archive
+    DOCKER_IMAGE_TAG=1.7-7.1-apache
     TEST_TYPE=from_archive
     PS_TARGET_VERSION=1.7.7.0
     PS_TARGET_BRANCH=1.7.7.x
