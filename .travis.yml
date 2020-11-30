@@ -5,25 +5,61 @@ php:
   - '5.6'
 
 env:
-  - VERSION=1.7.2.2
-    CHANNEL=major
-    TEST_TYPE=from_channel
-  - VERSION=1.6
-    CHANNEL=major
-    TEST_TYPE=from_channel
-  - VERSION=1.6.1.10
-    CHANNEL=minor
-    TEST_TYPE=from_channel
-  # Check how the upgrade behaves with the latest stable PrestaShop release
-  - VERSION=latest
-    CHANNEL=minor
-    TEST_TYPE=from_channel
-  # Check how the upgrade behaves with the latest pre-release PrestaShop version
-  - VERSION=latest
+  # --- Upgrades from latest ZIP archive ---
+  - VERSION=1.6.1.24
     CHANNEL=archive
     TEST_TYPE=from_archive
     PS_TARGET_VERSION=1.7.7.0
     PS_TARGET_BRANCH=1.7.7.x
+    IMAGE_PATH=1.6.1.24
+  - VERSION=1.7.2.0
+    CHANNEL=archive
+    TEST_TYPE=from_archive
+    PS_TARGET_VERSION=1.7.7.0
+    PS_TARGET_BRANCH=1.7.7.x
+    IMAGE_PATH=1.7.2.0
+  - VERSION=1.7.3.0
+    CHANNEL=archive
+    TEST_TYPE=from_archive
+    PS_TARGET_VERSION=1.7.7.0
+    PS_TARGET_BRANCH=1.7.7.x
+    IMAGE_PATH=1.7.3.0
+  - VERSION=1.7.4.0
+    CHANNEL=archive
+    TEST_TYPE=from_archive
+    PS_TARGET_VERSION=1.7.7.0
+    PS_TARGET_BRANCH=1.7.7.x
+    IMAGE_PATH=1.7.4.0
+  - VERSION=1.7.4.4
+    CHANNEL=archive
+    TEST_TYPE=from_archive
+    PS_TARGET_VERSION=1.7.7.0
+    PS_TARGET_BRANCH=1.7.7.x
+    IMAGE_PATH=1.7.4.4
+  - VERSION=1.7.5.0
+    CHANNEL=archive
+    TEST_TYPE=from_archive
+    PS_TARGET_VERSION=1.7.7.0
+    PS_TARGET_BRANCH=1.7.7.x
+    IMAGE_PATH=1.7.5.0
+  - VERSION=1.7.5.2
+    CHANNEL=archive
+    TEST_TYPE=from_archive
+    PS_TARGET_VERSION=1.7.7.0
+    PS_TARGET_BRANCH=1.7.7.x
+    IMAGE_PATH=1.7.5.2
+  - VERSION=1.7.6.0
+    CHANNEL=archive
+    TEST_TYPE=from_archive
+    PS_TARGET_VERSION=1.7.7.0
+    PS_TARGET_BRANCH=1.7.7.x
+    IMAGE_PATH=1.7.6.0
+  - VERSION=1.7.6.5
+    CHANNEL=archive
+    TEST_TYPE=from_archive
+    PS_TARGET_VERSION=1.7.7.0
+    PS_TARGET_BRANCH=1.7.7.x
+    IMAGE_PATH=1.7.6.5
 
 cache:
   directories:
