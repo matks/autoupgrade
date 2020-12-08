@@ -4,6 +4,11 @@ LABEL maintainer="PrestaShop Core Team <coreteam@prestashop.com>"
 
 ENV PS_VERSION 1.7.2.0
 
+RUN pecl install apcu \
+    && pecl install apcu_bc-1.0.3 \
+    && docker-php-ext-enable apcu --ini-name 10-docker-php-ext-apcu.ini \
+    && docker-php-ext-enable apc --ini-name 20-docker-php-ext-apc.ini
+
 # Get PrestaShop
 ADD https://www.prestashop.com/download/old/prestashop_1.7.2.0.zip /tmp/prestashop.zip
 # Extract
